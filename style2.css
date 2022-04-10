@@ -1,0 +1,219 @@
+* {
+    box-sizing: border-box;
+    
+}
+
+body {
+    margin: 0px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+header h1 {
+    top: 400;
+    text-align: center;
+    font-size: 40px;
+    color: rgb(0, 0, 0);
+    font-style: italic;
+    font-weight: 1500;
+}
+
+header {
+    padding: 40px;
+    background-color: rgb(10, 100, 235);
+}
+
+nav{
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.664);
+    overflow: hidden;
+    font-weight: 600px;
+    position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+nav a {
+    text-decoration: none;
+    padding: 20px;
+    text-align: center;
+    float: left;
+    color: white;
+    font-weight: 1000px;
+}
+
+main {
+    background-color: white;
+    text-align: center;
+}
+
+.X {
+    padding: 20px;
+}
+
+footer {
+    background-color: #333;
+    overflow: hidden;
+}
+
+footer a {
+    text-decoration: none;
+    padding: 20px;
+    text-align: center;
+    float: left;
+    color: white;
+}
+@media screen and (max-width: 700px){
+    nav {
+        flex-direction: column;
+        padding: 10px;
+    }
+}
+.flex-align-left{
+    margin-left: auto;
+}
+.menu-btn:hover {
+    background-color: white;
+    color: black;
+
+}
+
+.X {
+    background: linear-gradient(to right, #073362, #6658e7);
+    padding: 10px;
+    border-radius: 20px;
+    text-align: center;
+    font-size: 1.25em;
+    font-weight: 400px;
+}
+
+.sm-handle a{
+    background-color: rgb(6, 93, 139);
+    padding: 10px 15px;
+    border-radius: 30px;
+    margin: 5px 10px;
+    text-decoration: none;
+    font-size: 1.25em;
+    font-weight: 600px;
+}
+
+.sm-handle a:hover
+{
+    background-color: rgba(1, 60, 62, 0.832);
+}
+.sm-handle a i{
+    margin: 5px;
+}
+
+.linkedin-handle
+{
+    color: #0e76a8;
+}
+.insta_handle{
+    color: #dd2a7b;
+}
+.about_us{
+    margin: 50px;
+    background-color: rgba(128, 128, 128, 0.206);
+    border-radius: 20px;
+}
+.about_title{
+    font-size: 1.45em;
+    padding: 0px 10px;
+    color: #120f5e;
+}
+.about_content{
+    color: #1c1a3a;
+    font-weight: 400;
+    padding-bottom: 10px 0px 20px 0px;
+
+}
+footer{
+    display: flex;
+    background-color: #333;
+    overflow: hidden;
+}
+
+@media screen and (max-width: 700px){
+    footer{
+        flex-direction: column;
+        padding: 10px;
+    }
+}
+footer a {
+    text-decoration: none;
+    padding: 20px;
+    text-align: center;
+    float: left;
+    color: white;
+}
+
+.index span{
+    
+    padding: 10px 15px;
+    border-radius: 30px;
+    margin: 5px 10px;
+    text-decoration: none;
+    font-size: 1.25em;
+    font-weight: 900;
+    background-color: rgb(5, 168, 233);
+}
+
+#form1 input
+{
+    color: rgb(0, 0, 0);
+    font-size: 15;
+}
+
+.input_field
+{ 
+    width: 100%;
+    padding: 10px 0;
+    margin: 5px 0;
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 1px solid black;
+    outline: none;
+    background: transparent;
+    color: black;
+}
+
+.input_form
+{
+    
+    position: absolute;
+    /* width: 100%; */
+    transition: 5s;
+    color: black;
+}
+
+.submit-btn
+{
+    width: 50%;
+    padding: 10px 30px;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    background: #8a8580;
+    border: 0;
+    outline: none;
+    border-radius: 30px;
+    font-weight: 600px;
+    font-size: 1.25em;
+}
+
+.submit-btn1
+{
+    width: 20%;
+    padding: 10px 30px;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    background: #8a8580;
+    border: 0;
+    outline: none;
+    border-radius: 30px;
+    font-weight: 600px;
+    font-size: 1.25em;
+}
+

@@ -1,0 +1,150 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h3 a{
+    background-color: #f3c693;
+    padding: 10px 15px;
+    border-radius: 30px;
+    margin: 5px 10px;
+    text-decoration: none;
+    font-size: 1.25em;
+    font-weight: 600px;
+}
+.full-page
+{
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4),url(background_polling.jpg));
+    background-image: url(background_polling.jpg);
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+}
+.navbar
+{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    padding-left: 50px;
+    padding-right: 30px;
+    padding-top: 50px;
+}
+.index
+{   display: inline-block;
+    text-align: left;
+}
+.nav
+{
+    flex: 1;
+    text-align: center;
+}
+nav ul
+{
+    display: inline-block;
+    list-style: none;
+}
+nav ul li
+{
+    display: inline-block;
+    margin-right: 70px;
+}
+nav ul li a 
+{
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    font-family: sans-serif;
+}
+nav ul li 
+{   
+    font-size: 20px;
+    color: white;
+    outline: none;
+    background: transparent;
+    cursor: pointer;
+    font-family: sans-serif;
+}
+nav ul li a
+{
+    cursor: pointer;
+}
+a
+:hover
+{
+    color: aqua;
+}
+nav ul li a :hover
+{
+    color: aqua;
+}
+a
+{
+    text-decoration: none;
+    color: black;
+    font-size: 28px;
+}
+
+
+/* Sign Up page */
+.input_group_register
+{
+    top: 120px;
+    position: absolute;
+    width: 280px;
+    transition: 5s;
+    color: black;
+}
+.input_field
+{
+    width: 100%;
+    padding: 10px 0;
+    margin: 5px 0;
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 1px solid black;
+    outline: none;
+    background: transparent;
+    color: black;
+}
+
+.submit-btn
+{
+    width: 85%;
+    padding: 10px 30px;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    background: #f3c693;
+    border: 0;
+    outline: none;
+    border-radius: 30px;
+    font-weight: 600px;
+    font-size: 1.25em;
+}
+
+.check_box
+{
+    margin: 30px 10px 34px 0;
+}
+
+span
+{
+    color: black;
+    font-size: 12px;
+    bottom: 68px;
+    position: absolute;
+}
+
+#register11
+{
+    left: 450px;
+}
+#register11 input
+{
+    color: white;
+    font-size: 15;
+}

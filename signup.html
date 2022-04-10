@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Polling Website</title>
+  
+  <link rel="stylesheet" href="style.css">
+
+<script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-auth.js"></script>
+
+<!-- <script src="index.js"></script> -->
+<script src="signup.js"></script>
+  
+
+</head>
+<body>
+  <div class="full-page">
+    <div class="navbar">
+      <div>
+        <h1>Register Here!
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          
+          <h3>Already have an account?
+            <a href="signupnew.html">Login Here</a>
+          </h3>
+        </h1>
+        
+      </div>
+    <div>
+      <form id="contactForm" class="input_group_register">
+        <input type="text" class="input_field" id="first_name" placeholder="First Name" required>
+        <input type="text" class="input_field" id="last_name" placeholder="Last Name" required>
+        <input type="email" class="input_field" id="email" placeholder="Email Id" required>
+        <input type="password" class="input_field" id="password" placeholder="Enter Password" required>
+        <!-- <input type="password" class="input_field" id="password" placeholder="Confirm Password" required> -->
+        <input type="checkbox" class="check_box" required><span>I agree to the terms and conditions</span>
+        <button type="submit" class="submit-btn" onclick="register()">Register</button>
+        
+      </form>
+      
+    </div>
+  </div>
+
+</body>
+
+
+</html> 
