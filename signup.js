@@ -16,22 +16,24 @@
 
   //signup function
   function register(){
-    var email = document.getElementById("email");
-    var password = document.getElementById("password");
+    var email = document.getElementById("email").value;
+    var password = document.getElementById("password").value;
 
-    const promise = auth.createUserWithEmailAndPassword(email.value,password.value);
+    const promise = auth.createUserWithEmailAndPassword(email,password);
     //
     promise.catch(e=>alert(e.message));
     alert("User Account created successfully!!");
   }
 
   //signIN function
-  function  login(){
-    var email = document.getElementById("email");
-    var password  = document.getElementById("password");
-    const promise = auth.signInWithEmailAndPassword(email.value,password.value);
+  function  login(event){
+    event.preventDefault();
+    var email = document.getElementById("email").value;
+    var password  = document.getElementById("password").value;
+    console.log(email, password)
+    const promise = auth.signInWithEmailAndPassword(email,password);
     promise.catch(e=>alert(e.message));
-    alert("Welcome to the POLLING WEBSITE!!");
+    promise.then(res => alert(res));
   }
 
   //signOut
@@ -46,9 +48,9 @@
   firebase.auth().onAuthStateChanged((user)=>{
     if(user){
       var email = user.email;
-      alert("Active user "+email);
+      console.log("user active")
       window.location.replace("form1.html");    
     }else{
-      alert("No Active user Found!!")
+      console.log("No user found")
     }
   })
