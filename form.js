@@ -8,25 +8,24 @@
     messagingSenderId: "634135320881",
     appId: "1:634135320881:web:3c4de66a75e06531c3f810",
     measurementId: "G-5L3R0FMEJ6"
-  };
-
-
-    const database = firebase.firestore();
-  
-    const form = document.querySelector('#form');
-
-        form.addEventListener('submit', (e) => {
-            e.preventDefault();
-            database.collection('polls').add ({
-            title: form.title.value,
-            option1: form.option1.value,
-            option2: form.option2.value,
-            option3: form.option3.value,
-            option4: form.option4.value
-        });
-        alert("Please check for spelling mistakes. Once created you will not be able to change the texts of this poll. Proceed?");
+  }; 
+    // firebase.initializeApp(firebaseConfig);
+    // firebase.analytics();
+    function submit(event){
+    event.preventDefault();
+    firebase.database().ref("polls").push().set({
+      title: document.getElementById("title"),
+      option1: document.getElementById("option1"),
+      option2: document.getElementById("option2"),
+      option3: document.getElementById("option3"),
+      option4: document.getElementById("option4")
     })
-
-  
+    alert("Please check for spelling mistakes. Once created you will not be able to change the texts of this poll. Proceed?");
+    // window.location.replace("sharePoll.html");
+  }
+    
+  //      function share(){
+  //      window.location.replace("sharePoll.html");
+  //  }
 
   

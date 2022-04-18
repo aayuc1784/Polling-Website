@@ -46,7 +46,7 @@ main {
 }
 
 .input_field
-{ 
+{   
     width: 100%;
     padding: 10px 0;
     margin: 5px 0;
@@ -69,7 +69,7 @@ main {
 }
 
 .submit-btn
-{
+{  
     width: 100%;
     padding: 10px 30px;
     cursor: pointer;

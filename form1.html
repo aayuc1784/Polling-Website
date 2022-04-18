@@ -8,13 +8,10 @@
 
 <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-auth.js"></script>
-<!-- <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-database.js"></script> -->
-<script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-database.js"></script>
 
-<!-- <script src="index.js"></script> -->
 <script src="signout.js"></script>
 <script type="module" src="form.js"></script>
-<script type="module" src="polls.js"></script>
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -48,14 +45,14 @@
         <form id="form" class="input_form about_us">
             <h1 class="about_title">Question: What do you want to ask?</h1>
             <br>
-            <h2><input type="text" class="input_field about_content" name="title" required placeholder="Title of the Poll"></h2>
-            <input type="text" class="input_field about_content" name="option1"  required placeholder="Option 1">
-            <input type="text" class="input_field about_content" name="option2"  required placeholder="Option 2">
-            <input type="text" class="input_field about_content" name="option3"  placeholder="Option 3">
-            <input type="text" class="input_field about_content" name="option4" placeholder="Option 4">
-            <span><button onclick="submit();" class="submit-btn">Create Poll</button></span>
+            <h2><input type="text" class="input_field about_content" id="title" required placeholder="Title of the Poll"></h2>
+            <input type="text" class="input_field about_content" id="option1"  required placeholder="Option 1">
+            <input type="text" class="input_field about_content" id="option2"  required placeholder="Option 2">
+            <input type="text" class="input_field about_content" id="option3"  placeholder="Option 3">
+            <input type="text" class="input_field about_content" id="option4" placeholder="Option 4">
+            <span><button onclick="submit(event);" class="submit-btn">Create the Poll</button></span>
             <br>
-            <span><button <a href="form1.html" onclick="confirm('Do you want to close the poll?');" class="submit-btn">Close</button></span>
+            <span><button <a href="form1.html" onclick="confirm('Do you want to close the poll?')" class="submit-btn">Close Poll</button></span>
             </form>
           </div>
 

@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Polling Website | Share your Poll</title>
+    <script src="share_chart.js"></script>
     <link rel="stylesheet" href="style5.css">
 </head>
 <body>
@@ -20,15 +21,19 @@
     <main>
         <div>
             <form id="form" class="input_form about_us">
-                <h1 class="about_title input_field about_content" name="title">Title of the Poll</h1>
+                <h1 class="about_title input_field about_content" id="title" name="title">Title of the Poll</h1>
                 <br>
-                <span><button class="submit-btn input_field about_content" name="option1" >Option 1</button></span>
-                <span><button class="submit-btn input_field about_content" name="option2" >Option 2</button></span>
-                <span><button class="submit-btn input_field about_content" name="option3" >Option 3</button></span>
-                <span><button class="submit-btn input_field about_content" name="option4" >Option 4</button></span>
+                <span><input type="radio" class="submit-btn input_field about_content" id="option1" name="options">Option 1</span>
+                <span><input type="radio" class="submit-btn input_field about_content" id="option2" name="options">Option 2</span>
+                <span><input type="radio" class="submit-btn input_field about_content" id="option3" name="options">Option 3</span>
+                <span><input type="radio" class="submit-btn input_field about_content" id="option4"name="options">Option 4</span>
                 <hr>
                 <br>
+                <span><button <a href="chart.html" onclick="result('You will not be able to change your vote,once voted.Proceed?');" class="submit-btn">Submit and View the result</button></span>
+                  <br>
                 <span><button <a href="form1.html" onclick="confirm('Do you want to close this poll?');" class="submit-btn">Create another poll</button></span>
+                  <br>
+
                 <h1 class="about_title input_field about_content" name="title">Share the poll with your friends and get amazing responses!!</h1>
                 </form>
               </div>
@@ -60,7 +65,9 @@
             <form id="share">
             <div class="about_us">
                 <h3 class="about_title">
-                Share it Via
+                Vote to this poll "title" generated using Polling Website
+                <br>
+                Share it with your friends Via  "https://login-page-mini-insta.web.app/${poll.id}"
                  <hr>
                 </h3>
             </div>

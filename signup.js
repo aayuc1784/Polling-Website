@@ -54,3 +54,29 @@
       console.log("No user found")
     }
   })
+
+  function validate_email(email) {
+    expression = /^[^@]+@\w+(\.\w+)+\w$/
+    if(expression.test(email) ==true){
+      return true
+    } else{
+      return false
+    }
+  }
+function validate_password(password) {
+    if(password < 6) {
+      return false
+    } else{
+      return true
+    }
+  }
+function validate_field(field){
+    if(field==null){
+      return false
+    }
+    if(field.length <= 0){
+      return false
+    } else {
+      return true
+    }
+}

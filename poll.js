@@ -29,8 +29,7 @@
   
     const Poll = (props) => {
     const id = props.match.params.id;
-    const {user} = user();
-    const uid = user.uid;
+    
     const [label, setLabel] = useState([]);
     const [expiry, setExpiry] = useState(false);
     const [poll, setPoll] = useState(null);
@@ -71,9 +70,6 @@
           x.votes[uid] = index;
           updatePoll(x);
         
-        
-   
-
     }
     const handleLogout  = ()=>{
       firebase.auth().signOut().then(function() {
@@ -276,7 +272,7 @@ style={{
           onCancel = {showModal}
                 style={{textAlign:"center"}}
         >
-            <QRCode value={`https://insta-poll-72ce3.web.app/${poll.id}`} style={{height:"12rem", width:"12rem"}}  />
+            <QRCode value={`https://login-page-mini-insta.web.app/${poll.id}`} style={{height:"12rem", width:"12rem"}}  />
              </Modal>
           </div>
         </div>
