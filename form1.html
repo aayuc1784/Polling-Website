@@ -11,7 +11,7 @@
 <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-database.js"></script>
 
 <script src="signout.js"></script>
-<script type="module" src="form.js"></script>
+<script src="form.js"></script>
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -52,7 +52,7 @@
             <input type="text" class="input_field about_content" id="option4" placeholder="Option 4">
             <span><button onclick="submit(event);" class="submit-btn">Create the Poll</button></span>
             <br>
-            <span><button <a href="form1.html" onclick="confirm('Do you want to close the poll?')" class="submit-btn">Close Poll</button></span>
+            <span><button onclick="close(event)" class="submit-btn">Close Poll</button></span>
             </form>
           </div>
 
@@ -116,9 +116,10 @@
     <br>
     <footer>
       <a href="#">FAQ</a>
+      <a href="about_us.html">About Us</a>
       <a href="#">Terms of Use</a>
-      <a href="#">Privacy Policy</a>
-      <a href="#" class=".flex-align-left">&copy; |Polling Website</a>
+      <a href="policy.html">Privacy Policy</a>
+      <a href="#" class=".flex-align-left">&copy; |Polling Website | 2022 All Rights Reserved</a>
   </footer>
 
 </body>

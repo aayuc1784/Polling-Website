@@ -20,18 +20,18 @@
 
     <main>
         <div>
-            <form id="form" class="input_form about_us">
+            <form id="form" name="form" class="input_form about_us">
                 <h1 class="about_title input_field about_content" id="title" name="title">Title of the Poll</h1>
                 <br>
-                <span><input type="radio" class="submit-btn input_field about_content" id="option1" name="options">Option 1</span>
-                <span><input type="radio" class="submit-btn input_field about_content" id="option2" name="options">Option 2</span>
-                <span><input type="radio" class="submit-btn input_field about_content" id="option3" name="options">Option 3</span>
-                <span><input type="radio" class="submit-btn input_field about_content" id="option4"name="options">Option 4</span>
+                <span><input type="radio" class="submit-btn input_field about_content" id="option1" name="options" value="Option 1">Option 1</span>
+                <span><input type="radio" class="submit-btn input_field about_content" id="option2" name="options" value="Option 2">Option 2</span>
+                <span><input type="radio" class="submit-btn input_field about_content" id="option3" name="options" value="Option 3">Option 3</span>
+                <span><input type="radio" class="submit-btn input_field about_content" id="option4"name="options" value="Option 4">Option 4</span>
                 <hr>
                 <br>
-                <span><button <a href="chart.html" onclick="result('You will not be able to change your vote,once voted.Proceed?');" class="submit-btn">Submit and View the result</button></span>
+                <span><button <a href="chart.html" onclick="result(event)"class="submit-btn">Submit and View the result</button></span>
                   <br>
-                <span><button <a href="form1.html" onclick="confirm('Do you want to close this poll?');" class="submit-btn">Create another poll</button></span>
+                <span><button <a href="form1.html" onclick="confirm(event);" class="submit-btn">Create another poll</button></span>
                   <br>
 
                 <h1 class="about_title input_field about_content" name="title">Share the poll with your friends and get amazing responses!!</h1>
@@ -74,10 +74,11 @@
         </form>
 
         <footer>
-            <a href="#">FAQ</a>
-            <a href="#">Terms of Use</a>
-            <a href="#">Privacy Policy</a>
-            <a href="#" class=".flex-align-left">&copy; |Polling Website</a>
-        </footer>
+          <a href="#">FAQ</a>
+          <a href="about_us.html">About Us</a>
+          <a href="#">Terms of Use</a>
+          <a href="policy.html">Privacy Policy</a>
+          <a href="#" class=".flex-align-left">&copy; |Polling Website | 2022 All Rights Reserved</a>
+      </footer>
 </body>
 </html>

@@ -1,6 +1,4 @@
-// Your web app's Firebase configuration
-
-import { func } from "prop-types";
+// Your web app's Firebase config
 
   // For Firebase JS SDK v7.20.0 and later, measurementId is optional
   var firebaseConfig = {
@@ -13,10 +11,9 @@ import { func } from "prop-types";
     measurementId: "G-5L3R0FMEJ6"
   };
      
-    const database = firebase.database(); 
-    import './style5.css'; 
-    const {user} = user();
-    const uid = user.uid;
+    // const database = firebase.database();  
+    // const {user} = user();
+    // const uid = user.uid;
    function addDataToPollPage(){
        var title = document.getElementById('title');
        var option1 = document.getElementById('option1');
@@ -40,9 +37,9 @@ function fetchAllData(){
             }
     )
     });
-    
+    window.onload(fetchAllData);  
 }
-window.onload(fetchAllData);
+
 
 
 
@@ -75,12 +72,49 @@ const data ={
     "count" : "0"
 }]
 
-const totalVotes = Object.entries(data).reduce((total,n) => total +=n, 0);
-data = Object.entries(data).map(([label, votes]) => {
-    return {
-        label,
-        percentage: (((100*votes)/totalVotes ))
+// const totalVotes = Object.entries(data).reduce((total,n) => total +=n, 0);
+// data = Object.entries(data).map(([label, votes]) => {
+//     return {
+//         label,
+//         count
+//     }
+// });
+
+function result(event)
+
+{
+    event.preventDefault();
+    var count = 0;
+    var poll = document.form.options.value;
+   
+    if(poll=="Option 1"){count++
+        document.write("You have voted for Option 1 and poll count for options is Option 1= ",(count),
+        " ,Option 2=0, Option 3=0, Option 4=0");}
+
+    else if (poll=="Option 2"){count++
+        document.write("You have voted for Option 2 and poll count for options is Option 2= ",(count),
+        " ,Option 1=0, Option 3=0, Option 4=0");}
+
+    else if(poll=="Option 3"){count++
+        document.write("You have voted for Option 1 and poll count for options is Option 3= ",(count),
+        " ,Option 1=0, Option 2=0, Option 4=0");}
+
+    else if(poll=="Option 3"){count++
+        document.write("You have voted for Option 1 and poll count for options is Option 4= ",(count),
+        " ,Option 1=0, Option 2=0, Option 3=0");}
+    
+    else {
+        document.write("You haven't voted. Please make sure to vote");
     }
-});
+}
+
+// closing the poll
+
+function confirm (event)
+{   event.preventDefault();
+    alert("Do you want to close this poll?");
+    window.location.replace('form1.html');
+}
+
 
    

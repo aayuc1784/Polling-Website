@@ -21,11 +21,14 @@
       option4: document.getElementById("option4")
     })
     alert("Please check for spelling mistakes. Once created you will not be able to change the texts of this poll. Proceed?");
-    // window.location.replace("sharePoll.html");
+    window.location.replace("sharePoll.html");
   }
-    
-  //      function share(){
-  //      window.location.replace("sharePoll.html");
-  //  }
 
-  
+
+function close(event)
+{
+  event.preventDefault();
+  alert("Do you want to close the poll?");
+  window.location.replace(form1.html);
+}
+
