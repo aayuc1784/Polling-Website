@@ -57,22 +57,22 @@ const data ={
 
 [{
     "label" : "Option 1",
-    "percentage" : "0"
+    "count" : "0"
 },
 
 {
     "label" : "Option 2",
-    "percentage" : "0"
+    "count" : "0"
 },
 
 {
     "label" : "Option 3",
-    "percentage" : "0"
+    "count" : "0"
 },
 
 {
     "label" : "Option 4",
-    "percentage" : "0"
+    "count" : "0"
 }]
 
 const totalVotes = Object.entries(data).reduce((total,n) => total +=n, 0);
