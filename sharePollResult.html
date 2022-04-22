@@ -13,8 +13,8 @@
     <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-database.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-analytics.js"></script>
-    <script src="share_chart.js"></script>
-    <link rel="stylesheet" href="style5.css">
+    <script src="sharePollResult.js"></script>
+    <link rel="stylesheet" href="sharePollResult.css">
 </head>
 <body>
     <!-- <header>
@@ -33,8 +33,7 @@
     <main>
         <div class="index">
           <section>
-            <h2><span>Thank You for using Polling Website!!</span></h2>
-            
+            <h2><span>Thank You for your Valuable Vote!!</span></h2>
           </section>
         </div>
       </main>
@@ -43,15 +42,17 @@
             
                 <h1 class="about_title input_field about_content" id="title" name="title">Title of the Poll</h1>
                 <br>
-                <span><button class="submit-btn input_field about_content" id="option1" name="options" onclick="option1()" >option1 </button></span>
+                <span><button class="submit-btn1 input_field about_content" id="option1" name="options" onclick="option1()" >option1 </button></span>
                
-                <span><button class="submit-btn input_field about_content" id="option2" name="options" onclick="option2()">option2 </button></span>
+                <span><button class="submit-btn1 input_field about_content" id="option2" name="options" onclick="option2()">option2 </button></span>
                 
-                <span><button class="submit-btn input_field about_content" id="option3" name="options" onclick="option3()">option3</span>
+                <span><button class="submit-btn1 input_field about_content" id="option3" name="options" onclick="option3()">option3</span>
               
-                <span><button class="submit-btn input_field about_content" id="option4"name="options" onclick="option4()">option4</button></span>
+                <span><button class="submit-btn1 input_field about_content" id="option4"name="options" onclick="option4()">option4</button></span>
                 <hr>
                 <br>
+                <span><button onclick="result();" class="submit-btn">View Result</button></span>
+                  <br>
                 <span><button onclick="confirm(event)" class="submit-btn">Create another poll</button></span>
                   <br>
                   <hr>

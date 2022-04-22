@@ -4,24 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Polling Website | Create your Poll</title>
+    <title>Polling Website | Poll</title>
     
     <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
     <link rel="manifest" href="favicon/site.webmanifest">
-
-
 <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-auth.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-database.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-analytics.js"></script>
-<script src="form.js"></script>
+
 <script src="signout.js"></script>
+<script src="form.js"></script>
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<link rel="stylesheet" href="style2.css">
+<link rel="stylesheet" href="form_questions.css">
 </head>
 
 <body>
@@ -31,7 +29,7 @@
     <nav>
       <a href="index.html" class="menu-btn">Home</a>
       <a href="#" class="menu-btn">Create Poll</a>
-      <a href="#" class="menu-btn flex-align-left">Winter of Code</a>
+      <a href="#" class="menu-btn flex-align-left">Aayush</a>
       <button type="submit" id="signout" class="submit-btn1" onclick="signout()">SignOut</button>
     
     </nav>
@@ -47,21 +45,34 @@
         </div>
       </main>
       <br>
-      <div class="input_form about_us">
+      <div>
+        <form id="form" class="input_form about_us">
             <h1 class="about_title">Question: What do you want to ask?</h1>
             <br>
             <h2><input type="text" class="input_field about_content" id="title" required placeholder="Title of the Poll"></h2>
-            <input type="text" class="input_field about_content" id="option1" required placeholder="Option 1">
-            <input type="text" class="input_field about_content" id="option2" required placeholder="Option 2">
-            <input type="text" class="input_field about_content" id="option3" required placeholder="Option 3">
-            <input type="text" class="input_field about_content" id="option4" required placeholder="Option 4">
-            <br><br>
-            <span><button onclick="submit()" class="submit-btn">Create Poll</button></span>
             <br>
-            <span><button onclick="close('Do You want to close the Poll?');" class="submit-btn">Close Poll</button></span>
+            <h2><input type="text" class="input_field about_content" id="title" required placeholder="Question 1"></h2>
+            <input type="text" class="input_field about_content" id="option1"  required placeholder="Option 1">
+            <input type="text" class="input_field about_content" id="option2"  required placeholder="Option 2">
+            <input type="text" class="input_field about_content" id="option3"  placeholder="Option 3">
+            <input type="text" class="input_field about_content" id="option4" placeholder="Option 4">
+            <h2><hr></h2>
+            <h2><input type="text" class="input_field about_content" id="title" required placeholder="Question 2"></h2>
+            <input type="text" class="input_field about_content" id="option1"  required placeholder="Option 1">
+            <input type="text" class="input_field about_content" id="option2"  required placeholder="Option 2">
+            <input type="text" class="input_field about_content" id="option3"  placeholder="Option 3">
+            <input type="text" class="input_field about_content" id="option4" placeholder="Option 4">
+            <span><button onclick="Question(event);" class="submit-btn"> Add Another Question</button></span>
+            <br>
+            <span><button onclick="submit(event);" class="submit-btn">Create the Poll</button></span>
+            <br>
+            <span><button onclick="close(event)" class="submit-btn">Close Poll</button></span>
+            </form>
           </div>
-          <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-    <main>
+      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+      <br><br><br><br><br><br><br><br><br><br>
+     <main class="main2">
         <div class="about_us">
             <h3 class="about_title">How to create a poll?</h3>
           <p class="about_content"> 
@@ -103,4 +114,4 @@
       <a href="#" class=".flex-align-left">&copy; |Polling Website | 2022 All Rights Reserved</a>
   </footer>
 
-</body>
+</body> 

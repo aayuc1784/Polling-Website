@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Polling Website | Poll</title>
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+<script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-database.js"></script>
+
+<script src="signout.js"></script>
+<script src="form.js"></script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link rel="stylesheet" href="form_questions.css">
+</head>
+
+<body>
+    <header>
+        <h1>Polling Website-Poll</h1>
+    </header>
+    <nav>
+      <a href="index.html" class="menu-btn">Home</a>
+      <a href="#" class="menu-btn">Create Poll</a>
+      <a href="#" class="menu-btn flex-align-left">Aayush</a>
+      <button type="submit" id="signout" class="submit-btn1" onclick="signout()">SignOut</button>
+    
+    </nav>
+    <br>
+    <br>
+    <br>
+    <main>
+        <div class="index">
+          <section>
+            <h2><span> Poll Maker</span></h2>
+            <br>
+          </section>
+        </div>
+      </main>
+      <br>
+      <div>
+        <form id="form" class="input_form about_us">
+            <h1 class="about_title">Question: What do you want to ask?</h1>
+            <br>
+            <h2><input type="text" class="input_field about_content" id="title" required placeholder="Title of the Poll"></h2>
+            <br>
+            <h2><input type="text" class="input_field about_content" id="title" required placeholder="Question 1"></h2>
+            <input type="text" class="input_field about_content" id="option1"  required placeholder="Option 1">
+            <input type="text" class="input_field about_content" id="option2"  required placeholder="Option 2">
+            <input type="text" class="input_field about_content" id="option3"  placeholder="Option 3">
+            <input type="text" class="input_field about_content" id="option4" placeholder="Option 4">
+            <h2><hr></h2>
+            <h2><input type="text" class="input_field about_content" id="title" required placeholder="Question 2"></h2>
+            <input type="text" class="input_field about_content" id="option1"  required placeholder="Option 1">
+            <input type="text" class="input_field about_content" id="option2"  required placeholder="Option 2">
+            <input type="text" class="input_field about_content" id="option3"  placeholder="Option 3">
+            <input type="text" class="input_field about_content" id="option4" placeholder="Option 4">
+            <h2><hr></h2>
+            <h2><input type="text" class="input_field about_content" id="title" required placeholder="Question 3"></h2>
+            <input type="text" class="input_field about_content" id="option1"  required placeholder="Option 1">
+            <input type="text" class="input_field about_content" id="option2"  required placeholder="Option 2">
+            <input type="text" class="input_field about_content" id="option3"  placeholder="Option 3">
+            <input type="text" class="input_field about_content" id="option4" placeholder="Option 4">
+            <h2><hr></h2>
+            <h2><input type="text" class="input_field about_content" id="title" required placeholder="Question 4"></h2>
+            <input type="text" class="input_field about_content" id="option1"  required placeholder="Option 1">
+            <input type="text" class="input_field about_content" id="option2"  required placeholder="Option 2">
+            <input type="text" class="input_field about_content" id="option3"  placeholder="Option 3">
+            <input type="text" class="input_field about_content" id="option4" placeholder="Option 4">
+            <h2><hr></h2>
+            <h2><input type="text" class="input_field about_content" id="title" required placeholder="Question 3"></h2>
+            <input type="text" class="input_field about_content" id="option1"  required placeholder="Option 1">
+            <input type="text" class="input_field about_content" id="option2"  required placeholder="Option 2">
+            <input type="text" class="input_field about_content" id="option3"  placeholder="Option 3">
+            <input type="text" class="input_field about_content" id="option4" placeholder="Option 4">
+            <h2><hr></h2>
+            <h2><input type="text" class="input_field about_content" id="title" required placeholder="Question 5"></h2>
+            <input type="text" class="input_field about_content" id="option1"  required placeholder="Option 1">
+            <input type="text" class="input_field about_content" id="option2"  required placeholder="Option 2">
+            <input type="text" class="input_field about_content" id="option3"  placeholder="Option 3">
+            <input type="text" class="input_field about_content" id="option4" placeholder="Option 4">
+            <span><button onclick="Question(event);" class="submit-btn"> Add Another Question</button></span>
+            <br>
+            <span><button onclick="submit(event);" class="submit-btn">Create the Poll</button></span>
+            <br>
+            <span><button onclick="close(event)" class="submit-btn">Close Poll</button></span>
+            </form>
+          </div>
+      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+     <main class="main2">
+        <div class="about_us">
+            <h3 class="about_title">How to create a poll?</h3>
+          <p class="about_content"> 
+            To create a poll or to Answer any question,First You have to register yourself on the Website. To register click on the SignUp button or Create a Poll,Then register yourself as a user.After registering on the Website, you will be redirected to a page where you can create a poll.The poll may be of three types Single options,multiple options and the quiz types.After selecting the Poll type you can select the title of the poll and add the question according to yourself.After successful creation of your poll,You can share it with your friend and see the result of poll through various Histograms or Graphical Representation.
+            <br>
+            <br>
+          </p>
+          </div>
+    </main>
+
+    <br>
+<br>
+<br>
+    <main>
+      
+        <span class="X">
+          Contact Us
+        </span>
+        <br>
+        <br>
+        <br>
+         <section>
+          <div class="sm-handle">
+             <a href="https://instagram.com/aayuc1784?utm_medium=copy_link" target="_blank"> <i class="fa fa-instagram fa-lg insta-handle"> </i>Instagram</a> 
+          <a href="https://www.linkedin.com/in/aayuc1784" target="_blank"> <i class="fa fa-linkedin fa-lg linkedin-handle"> </i>LinkedIn</a>
+          </div>
+  
+
+      </section>
+    </main>
+    <br>   
+    <br>
+    <br>
+    <footer>
+      <a href="#">FAQ</a>
+      <a href="about_us.html">About Us</a>
+      <a href="#">Terms of Use</a>
+      <a href="policy.html">Privacy Policy</a>
+      <a href="#" class=".flex-align-left">&copy; |Polling Website | 2022 All Rights Reserved</a>
+  </footer>
+
+</body> 
