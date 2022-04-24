@@ -23,6 +23,6 @@
 
  function signout(){
     auth.signOut();
-    alert("SignOut Successfully from System!!");
+    alert("Sign Out Successfully from the Polling Website!!");
     window.location.replace("index.html");    
   }

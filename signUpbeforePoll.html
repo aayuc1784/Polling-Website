@@ -11,7 +11,7 @@
 <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-auth.js"></script>
 
-<script src="signup1.js"></script>
+<script src="signInbeforepoll.js"></script>
       
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
@@ -89,8 +89,8 @@ form h3{
 
 label{
     display: block;
-    margin-top: 30px;
-    font-size: 16px;
+    margin-top: 20px;
+    font-size: 12px;
     font-weight: 500;
 }
 input{
@@ -134,15 +134,7 @@ button{
 .social div:hover{
   background-color: rgba(255,255,255,0.47);
 }
-.social .go{
-  margin-left: 25px;
-  text-align: center;
-}
-.social i{
-  margin-right: 4px;
-}
-
-    </style>
+</style>
 </head>
 <body>
     <div class="background">
@@ -150,19 +142,21 @@ button{
         <div class="shape"></div>
     </div>
     <form>
-        <h3>Login Here!</h3>
-
+        <h3>Register Here!</h3>
+        <label for="First Name">First Name</label>
+        <input type="text" required placeholder="First Name" id="first_name">
+        <label for="First Name">Last Name</label>
+        <input type="text" required placeholder="Last Name" id="last_name">
         <label for="username">Email</label>
         <input type="text" required placeholder="Email" id="email">
-
         <label for="password">Password</label>
         <input type="password" required placeholder="Password" id="password">
-
-        <button onclick="login(event)">Log In</button>
-        <div class="social"></div>
-         
+        <button onclick="register()">Register</button>
         </div>
     </form>
-
+    <div class="social">
+        <span><button onclick="create()" class="social">Already Have an account?
+        </button></span>
+    </div>
 </body>
 </html>

@@ -15,7 +15,7 @@
  firebase.initializeApp(firebaseConfig);
  firebase.analytics();
     
- 
+
     function submit ()
     {
       firebase.database().ref("Polls").push().set({
@@ -28,13 +28,40 @@
       option2: document.getElementById("option2").value,
       option3: document.getElementById("option3").value,
       option4: document.getElementById("option4").value
+      }) 
+      firebase.database().ref("poll").set({
+      title: document.getElementById("title").value,
+      option1: document.getElementById("option1").value,
+      option2: document.getElementById("option2").value,
+      option3: document.getElementById("option3").value,
+      option4: document.getElementById("option4").value
+      })
+      firebase.database().ref("Votes/1").set({
+          option: document.getElementById("option1").value,
+          countOption: 0,
+         })
+       
+        firebase.database().ref("Votes/2").set({
+          option: document.getElementById("option2").value,
+          countOption: 0,
+         })
       
-    })
-    alert("Please check for spelling mistakes. Once created you will not be able to change the texts of this poll. Proceed?");
-    // window.location.replace('sharePoll.html');
+        firebase.database().ref("Votes/3").set({
+          option: document.getElementById("option3").value,
+          countOption: 0,
+         })
+       
+        firebase.database().ref("Votes/4").set({
+          option: document.getElementById("option4").value,
+          countOption: 0,
+         })
+  
 
-    const pollId = firebase.database().ref("Polls").push().key;
-    console.log(pollId);
+    .then(()=>
+    {
+    alert("Please check for spelling mistakes. Once created you will not be able to change the texts of this poll. Proceed?");
+    window.location.replace('fetchDataOfPoll.html');
+    })
 }
 // closing the Poll
 
